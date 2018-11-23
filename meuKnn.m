@@ -10,7 +10,7 @@ for j=1:size(dadosTeste)(1)
   for i=1:size(dadosTrain)(1)
     dist(j,i) = euclidiana(dadosTeste(j,:), dadosTrain(i, :));
   endfor
-  [distOrdenada ind] = sort(j,:);
+  [distOrdenada, ind] = sort(dist(j,:));
   rotuloPrevisto(j) = rotuloTrain(ind(1:k));
 endfor
 
