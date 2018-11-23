@@ -7,3 +7,7 @@ estaCorreto = rotuloPrevisto == l.testRots;
 numCorreto = sum(estaCorreto);
 totalNum = length(l.testRots);
 precisao = numCorreto / totalNum;
+
+disp('precisao'); 
+disp(precisao); 
+disp(size(precisao)); 
