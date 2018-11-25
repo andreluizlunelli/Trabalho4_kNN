@@ -1,3 +1,4 @@
+% Alunos: André, Karin e Simon
 function rotuloPrevisto = meuKnn(dadosTrain, rotuloTrain, dadosTeste, k)
   %Para cada exemplo de teste
 % Calcule a distância entre o exemplo de teste e os dados de treinamento
@@ -8,10 +9,9 @@ function rotuloPrevisto = meuKnn(dadosTrain, rotuloTrain, dadosTeste, k)
 
 for j=1:size(dadosTeste)(1)
   for i=1:size(dadosTrain)(1)
-    dist(j,i) = euclidiana(dadosTeste(j,:), dadosTrain(i, :));
+    _dist(j,i) = dist(dadosTeste(j,:), dadosTrain(i, :));
   endfor
-  [distOrdenada, ind] = sort(dist(j,:));
+  [distOrdenada, ind] = sort(_dist(j,:));
   rotuloPrevisto(j,1) = rotuloTrain(ind(1:k));
 endfor
-
 endfunction
