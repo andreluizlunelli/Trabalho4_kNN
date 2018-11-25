@@ -3,7 +3,7 @@
 Q1.1
   R: 98% com k=3
 Q1.2
-  R: 
+  R: 94% com k=10
 #}
 clear;clc;close all;
 
@@ -14,7 +14,8 @@ trainRots = l.trainRots;
 grupoTest = l.grupoTest;
 testRots = l.testRots;
 
-rotuloPrevisto = meuKnn(grupoTrain, trainRots, grupoTest, 3);
+%rotuloPrevisto = meuKnn(grupoTrain, trainRots, grupoTest, 3);
+rotuloPrevisto = meuKnn(grupoTrain, trainRots, grupoTest, 10);
 
 estaCorreto = rotuloPrevisto == testRots;
 numCorreto = sum(estaCorreto);

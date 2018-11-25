@@ -14,6 +14,6 @@ function rotuloPrevisto = meuKnn(dadosTrain, rotuloTrain, dadosTeste, k)
     endfor
     [distOrdenada, ind] = sort(dist(j,:)); % Ordene as distâncias
          
-    rotuloPrevisto(j,1) = mode(rotuloTrain(ind(k))); % O rótulo previsto corresponde ao rótulo do exemplo mais próximo k
+    rotuloPrevisto(j,1) = mode(rotuloTrain(ind(1:k))); % O rótulo previsto corresponde ao rótulo do exemplo mais próximo k
   endfor   
 endfunction
