@@ -6,9 +6,6 @@ function rotuloPrevisto = meuKnn(dadosTrain, rotuloTrain, dadosTeste, k)
     endfor
     [distOrdenada, ind] = sort(_dist(j,:)); % Ordene as distâncias. A ordem iX de cada elemento ordenado é
          
-    rotuloPrevisto(j,1) = rotuloTrain(ind(k)); % O rótulo previsto corresponde ao rótulo do exemplo mais próximo (iX(1))
-    
-    
-  endfor
-  a = 0;
+    rotuloPrevisto(j,1) = mode(rotuloTrain(ind(k))); % O rótulo previsto corresponde ao rótulo do exemplo mais próximo (iX(1))       
+  endfor      
 endfunction
