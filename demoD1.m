@@ -2,11 +2,17 @@
 clear;clc;close all;
 
 l = load('grupoDados1');
-rotuloPrevisto = meuKnn(l.grupoTrain, l.trainRots, l.grupoTest, 1);
 
-estaCorreto = rotuloPrevisto == l.testRots;
+grupoTrain = l.grupoTrain;
+trainRots = l.trainRots;
+grupoTest = l.grupoTest;
+testRots = l.testRots;
+
+rotuloPrevisto = meuKnn(grupoTrain, trainRots, grupoTest, 10);
+
+estaCorreto = rotuloPrevisto == testRots;
 numCorreto = sum(estaCorreto);
-totalNum = length(l.testRots);
+totalNum = length(testRots);
 precisao = numCorreto / totalNum;
 
 disp(precisao);
