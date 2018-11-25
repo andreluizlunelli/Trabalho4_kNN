@@ -16,3 +16,5 @@ totalNum = length(testRots);
 precisao = numCorreto / totalNum;
 
 disp(precisao);
+
+visualizaPontos(grupoTrain, rotuloPrevisto, 2,1);
