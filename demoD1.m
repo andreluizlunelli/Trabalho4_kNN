@@ -1,3 +1,4 @@
+% Alunos: André, Karin e Simon
 clear;clc;close all;
 
 l = load('grupoDados1');
@@ -8,6 +9,4 @@ numCorreto = sum(estaCorreto);
 totalNum = length(l.testRots);
 precisao = numCorreto / totalNum;
 
-disp('precisao'); 
-disp(precisao); 
-disp(size(precisao)); 
+disp(precisao);
