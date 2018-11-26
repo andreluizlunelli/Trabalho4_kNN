@@ -1,21 +1,23 @@
 % Alunos: André, Karin e Simon
 #{
-Q1.1
-  R: 98% com k=3
-Q1.2
-  R: Sim
+Q2.1
+  R: 61% com k=3
+Q2.2
+  R: 
 #}
+
 clear;clc;close all;
 
-l = load('grupoDados1');
+l = load('grupoDados2');
 
 grupoTrain = l.grupoTrain;
 trainRots = l.trainRots;
 grupoTest = l.grupoTest;
 testRots = l.testRots;
 
-%rotuloPrevisto = meuKnn(grupoTrain, trainRots, grupoTest, 3);
-rotuloPrevisto = meuKnn(grupoTrain, trainRots, grupoTest, 10);
+%TODO: normalizar os dados e calcular Knn
+
+rotuloPrevisto = meuKnn(grupoTrain, trainRots, grupoTest, 3);
 
 estaCorreto = rotuloPrevisto == testRots;
 numCorreto = sum(estaCorreto);
