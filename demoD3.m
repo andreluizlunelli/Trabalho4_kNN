@@ -1,14 +1,14 @@
 % Alunos: André, Karin e Simon
 #{
-Q2.1
+Q3.1
   R: 
-Q2.2
+Q3.2
   R: 
 #}
 
 clear;clc;close all;
 
-l = load('grupoDados2');
+l = load('grupoDados3');
 
 grupoTrain = l.grupoTrain;
 trainRots = l.trainRots;
@@ -19,7 +19,7 @@ testRots = l.testRots;
 grupoTrainNormal = normal(grupoTrain);
 grupoTestNormal = normal(grupoTest);
 
-rotuloPrevisto = meuKnn(grupoTrainNormal, trainRots, grupoTestNormal, 1);
+rotuloPrevisto = meuKnn(grupoTrainNormal, trainRots, grupoTestNormal, 25);
 
 estaCorreto = rotuloPrevisto == testRots;
 numCorreto = sum(estaCorreto);

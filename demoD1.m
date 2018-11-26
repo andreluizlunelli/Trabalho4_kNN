@@ -24,4 +24,4 @@ precisao = numCorreto / totalNum;
 
 disp(precisao);
 
-visualizaPontos(grupoTrain, rotuloPrevisto, 2,1);
+visualizaPontos(grupoTrain, rotuloPrevisto, 1,2);
