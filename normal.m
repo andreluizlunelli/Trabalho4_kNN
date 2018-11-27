@@ -1,8 +1,7 @@
 % Alunos: André, Karin e Simon
-% Normaliza os dados passados
 
+% Normaliza grupo de dados e retorna
 function grupoNormal = normal(grupo)
-  %Fazer normalização de um atributo (coluna)
   %x_normalizado = x - min(x) / max(x) - min(x) 
   [nr, nc] = size(grupo)
    for i = 1:nc   %para cada coluna

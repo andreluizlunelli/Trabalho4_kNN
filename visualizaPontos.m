@@ -1,4 +1,5 @@
 % Alunos: André, Karin e Simon
+
 function visualizaPontos (dados, rotulos, d1, d2)
   figure; clf; hold on
   plot(dados(rotulos == 1, d1), dados(rotulos == 1, d2), 'r*');

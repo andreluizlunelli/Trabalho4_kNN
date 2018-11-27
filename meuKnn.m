@@ -1,12 +1,12 @@
 % Alunos: André, Karin e Simon
+
 function rotuloPrevisto = meuKnn(dadosTrain, rotuloTrain, dadosTeste, k)
-  
   testeSize = size(dadosTeste,1);
   trainSize = size(dadosTrain,1);
   
   dist = zeros(testeSize,trainSize);
   
-  rotuloPrevisto = zeros(testeSize,1); % reinicializa o vetor para os rotulos previstos
+  rotuloPrevisto = zeros(testeSize,1); % inicializa o vetor para os rotulos previstos
   
   for j=1:testeSize
     for i=1:trainSize

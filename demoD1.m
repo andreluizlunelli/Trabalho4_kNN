@@ -5,17 +5,17 @@ Q1.1
 Q1.2
   R: Sim
 #}
+
 clear;clc;close all;
 
+%Carrega grupo de dados 1
 l = load('grupoDados1');
-
 grupoTrain = l.grupoTrain;
 trainRots = l.trainRots;
 grupoTest = l.grupoTest;
 testRots = l.testRots;
 
-%rotuloPrevisto = meuKnn(grupoTrain, trainRots, grupoTest, 3);
-rotuloPrevisto = meuKnn(grupoTrain, trainRots, grupoTest, 10);
+rotuloPrevisto = meuKnn(grupoTrain, trainRots, grupoTest, 3);
 
 estaCorreto = rotuloPrevisto == testRots;
 numCorreto = sum(estaCorreto);
@@ -24,4 +24,4 @@ precisao = numCorreto / totalNum;
 
 disp(precisao);
 
-visualizaPontos(grupoTrain, rotuloPrevisto, 1,2);
+visualizaPontos(grupoTrain, trainRots, 2, 1);
